@@ -17,7 +17,7 @@ def decrypt_directory(input_directory, key):
         for file in files:
             if file.endswith(".enc"):
                 input_path = os.path.join(root, file)
-                output_path = os.path.join(output_dir, file[:-4])  # Retire l'extension .enc
+                output_path = os.path.join(output_dir, file[:-4])
                 decrypt_file(input_path, output_path, key)
                 print(f"Fichier déchiffré : {output_path}")
 
