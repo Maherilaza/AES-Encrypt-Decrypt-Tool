@@ -9,20 +9,21 @@ Assurez-vous d'installer la bibliothèque `pycryptodome` en utilisant `pip insta
 
 ## Chiffrement
 
-Pour chiffrer un fichier ou un dossier, exécutez le script `encrypt_aes_file.py`. Vous aurez le choix de spécifier le chemin du fichier/dossier à chiffrer ou d'utiliser le dossier par défaut "AES-EF". La clé de déchiffrement sera générée automatiquement dans le fichier "AES-C" à chaque utilisation.
+Pour chiffrer un fichier ou un dossier, exécutez le script main.py`. Vous aurez le choix de spécifier le chemin du fichier/dossier à chiffrer ou d'utiliser le dossier par défaut "AES-EF". La clé de déchiffrement sera générée automatiquement dans le fichier "AES-C" à chaque utilisation.
 
 ```shell
-python encrypt_aes_file.py
+python3 main.py
+````
 
-Déchiffrement
+## Déchiffrement
 Pour déchiffrer un fichier chiffré, exécutez le script decrypt_aes_file.py. Vous aurez le choix entre utiliser la clé stockée dans "AES-C" ou spécifier un emplacement pour la clé de déchiffrement. Les fichiers déchiffrés seront placés dans le dossier "AES-DF".
 
-Structure des fichiers
-encrypt_aes_file.py: Script de chiffrement AES.
-decrypt_aes_file.py: Script de déchiffrement AES.
-AES-C: Fichier contenant la clé de déchiffrement générée automatiquement.
-AES-EF: Dossier par défaut pour le chiffrement des fichiers.
-AES-DF: Dossier où les fichiers déchiffrés sont stockés.
+### Structure des fichiers
+* main.py: Script de chiffrement AES.
+* decrypt_aes_file.py: Script de déchiffrement AES.
+* AES-C: Fichier contenant la clé de déchiffrement générée automatiquement.
+* AES-EF: Dossier par défaut pour le chiffrement des fichiers.
+* AES-DF: Dossier où les fichiers déchiffrés sont stockés.
 
-Avertissement
+#### Avertissement
 Assurez-vous de conserver en sécurité la clé de déchiffrement (fichier "AES-C"), car elle est nécessaire pour déchiffrer les fichiers.

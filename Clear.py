@@ -10,6 +10,7 @@ while condition:
         break
     else:
         print("Lol ..")
+        break
 
 dossier = "AES-EF"
 temp = os.listdir(dossier)
