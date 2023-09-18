@@ -18,6 +18,13 @@ def encrypt_file(input_file, output_file, key):
         file_out.write(tag)
         file_out.write(ciphertext)
 
+try:
+    def delete_PAST_F_H():
+        rm = os.remove("AES-EF/PAST_FILE_HERE")
+    delete_PAST_F_H()
+
+except:
+    pass
 
 def encrypt_directory(directory, key):
     output_dir = "AES-EF"
@@ -56,7 +63,10 @@ def main():
         print("Dossier par défaut (AES-EF) crypté avec succès.")
     else:
         print("Choix invalide.")
+#Create P_F_H
 
 
 if __name__ == "__main__":
     main()
+with open("AES-EF\PAST_FILE_HERE", "w") as f:
+    f.write("J'/te demande de coller le fichier ici, t'es con ou quoi *_*")
