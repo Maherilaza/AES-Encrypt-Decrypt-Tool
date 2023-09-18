@@ -1,11 +1,7 @@
 # AES-E-D
 # Chiffrement et Déchiffrement AES
 
-Ce script Python vous permet de chiffrer et de déchiffrer des fichiers en utilisant l'algorithme de chiffrement AES (Advanced Encryption Standard). Le code utilise la bibliothèque `pycryptodome` pour implémenter le chiffrement AES.
-
-## Configuration
-
-Assurez-vous d'installer la bibliothèque `pycryptodome` en utilisant `pip install pycryptodome` avant d'exécuter le code.
+Ce script Python vous permet de chiffrer et de déchiffrer des fichiers en utilisant l'algorithme de chiffrement AES. Le code utilise la bibliothèque `pycryptodome` pour implémenter le chiffrement AES.
 
 ## Chiffrement
 
