@@ -30,7 +30,7 @@ def main():
         decrypt_directory("AES-EF", key)
         print("Dossier par défaut (AES-EF) déchiffré avec succès.")
     except:
-        print(("Veuillez mettre la bonne la clé AES-C dans le dossier principal."))
+        print(("Veuillez mettre la bonne clé AES-C dans le dossier principal."))
         print(("Pas de clé pas de fichier "))
 
 if __name__ == "__main__":
