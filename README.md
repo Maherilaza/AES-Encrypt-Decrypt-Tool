@@ -10,14 +10,14 @@ This Python script allows you to encrypt and decrypt files using the AES encrypt
 python3 -r requirement.txt
 ```
 
-## Chiffrement
+## Encryption
 
 To encrypt a file or a folder, run the 'Encrypt.py' script. You will have the option to specify the path of the file/folder to encrypt or to use the default folder "AES-EF". The decryption key will be automatically generated in the "AES-C" file each time the script is used.
 ```shell
 python3 Encrypt.py
 ````
 
-## Déchiffrement
+## Decryption
 To decrypt an encrypted file, run the "Decrypt.py" script. You can choose to use the key stored in "AES-C" or specify a location for the decryption key. The decrypted files will be placed in the "AES-DF" folder.
 
 ### File Structure
