@@ -19,19 +19,19 @@ def decrypt_directory(input_directory, key):
                 input_path = os.path.join(root, file)
                 output_path = os.path.join(output_dir, file[:-4])
                 decrypt_file(input_path, output_path, key)
-                print(f"Fichier déchiffré : {output_path}")
+                print(f"Decrypted file: {output_path}")
 
 def main():
     try:
         key = None
-        with open("AES-C", "rb") as key_file:
+        with open("KEY/AES-C.KEY", "rb") as key_file:
             key = key_file.read()
 
         decrypt_directory("AES-EF", key)
-        print("Dossier par défaut (AES-EF) déchiffré avec succès.")
+        print("Default directory (AES-EF) decrypted successfully.")
     except:
-        print(("Veuillez mettre la bonne clé AES-C dans le dossier principal."))
-        print(("Pas de clé pas de fichier "))
+        print("Please put the correct AES-C key in the main folder.")
+        print("No key, no file.")
 
 if __name__ == "__main__":
     main()
