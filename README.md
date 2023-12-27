@@ -1,25 +1,32 @@
 # AES-E-D
-# Chiffrement et Déchiffrement AES
 
-Ce script Python vous permet de chiffrer et de déchiffrer des fichiers en utilisant l'algorithme de chiffrement AES. Le code utilise la bibliothèque `pycryptodome` pour implémenter le chiffrement AES.
+AES-E-D
+# AES Encryption and Decryption
+
+This Python script allows you to encrypt and decrypt files using the AES encryption algorithm. The code utilizes the pycryptodome library to implement AES encryption.
+
+## Requirement
+```shell
+python3 -r requirement.txt
+```
 
 ## Chiffrement
 
-Pour chiffrer un fichier ou un dossier, exécutez le script main.py`. Vous aurez le choix de spécifier le chemin du fichier/dossier à chiffrer ou d'utiliser le dossier par défaut "AES-EF". La clé de déchiffrement sera générée automatiquement dans le fichier "AES-C" à chaque utilisation.
-
+To encrypt a file or a folder, run the 'Encrypt.py' script. You will have the option to specify the path of the file/folder to encrypt or to use the default folder "AES-EF". The decryption key will be automatically generated in the "AES-C" file each time the script is used.
 ```shell
-python3 main.py
+python3 Encrypt.py
 ````
 
 ## Déchiffrement
-Pour déchiffrer un fichier chiffré, exécutez le script decrypt_aes_file.py. Vous aurez le choix entre utiliser la clé stockée dans "AES-C" ou spécifier un emplacement pour la clé de déchiffrement. Les fichiers déchiffrés seront placés dans le dossier "AES-DF".
+To decrypt an encrypted file, run the "Decrypt.py" script. You can choose to use the key stored in "AES-C" or specify a location for the decryption key. The decrypted files will be placed in the "AES-DF" folder.
 
-### Structure des fichiers
-* main.py: Script de chiffrement AES.
-* decrypt_aes_file.py: Script de déchiffrement AES.
+### File Structure
+* Encrypt.py: AES encryption script.
+* Decrypt.py: AES decryption script.
 * AES-C: Fichier contenant la clé de déchiffrement générée automatiquement.
-* AES-EF: Dossier par défaut pour le chiffrement des fichiers.
-* AES-DF: Dossier où les fichiers déchiffrés sont stockés.
+* KEY/AES-EF.KEY: File containing the automatically generated decryption key.
+* AES-DF: Default folder for encrypting files.
+* AES-DF: Folder where decrypted files are stored.
 
-#### Avertissement
-Assurez-vous de conserver en sécurité la clé de déchiffrement (fichier "AES-C"), car elle est nécessaire pour déchiffrer les fichiers.
+#### Warning :
+Make sure to securely keep the decryption key ("AES-C" file) as it is required to decrypt the files.

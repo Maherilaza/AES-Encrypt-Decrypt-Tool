@@ -5,7 +5,7 @@ from Crypto.Random import get_random_bytes
 
 def generate_aes_key():
     key = get_random_bytes(16)
-    with open("AES-C", "wb") as key_file:
+    with open("KEY/AES-C.KEY", "wb") as key_file:
         key_file.write(key)
 
 
@@ -19,54 +19,59 @@ def encrypt_file(input_file, output_file, key):
         file_out.write(ciphertext)
 
 try:
-    def delete_PAST_F_H():
+    def delete_past_file():
         rm = os.remove("AES-EF/PAST_FILE_HERE")
-    delete_PAST_F_H()
+    delete_past_file()
 
 except:
     pass
+
+import os
 
 def encrypt_directory(directory, key):
     output_dir = "AES-EF"
     os.makedirs(output_dir, exist_ok=True)
     for root, _, files in os.walk(directory):
         for file in files:
+            if file == "PAST_FILE_HERE":
+                continue
             input_path = os.path.join(root, file)
             output_path = os.path.join(output_dir, file + ".enc")
             encrypt_file(input_path, output_path, key)
+            os.remove(input_path)
 
 
 def main():
     generate_aes_key()
 
-    print("Choisissez l'option :")
-    print("1. Spécifier le chemin du fichier/dossier à crypter")
-    print("2. Utiliser le dossier par défaut (AES-EF)")
-    choice = input("Votre choix : ")
+    print("Choose an option:")
+    print("1. Specify the path of the file/directory to encrypt")
+    print("2. Use the default directory (AES-EF)")
+    choice = input("Your choice: ")
 
     key = None
-    with open("AES-C", "rb") as key_file:
+    with open("KEY/AES-C.KEY", "rb") as key_file:
         key = key_file.read()
 
     if choice == "1":
-        path = input("Entrez le chemin du fichier/dossier à crypter : ")
+        path = input("Enter the path of the file/directory to encrypt: ")
         if os.path.isfile(path):
             encrypt_file(path, path + ".enc", key)
-            print("Fichier crypté avec succès.")
+            print("File encrypted successfully.")
         elif os.path.isdir(path):
             encrypt_directory(path, key)
-            print("Dossier crypté avec succès.")
+            print("Directory encrypted successfully.")
         else:
-            print("Le chemin spécifié n'est ni un fichier ni un dossier.")
+            print("The specified path is neither a file nor a directory.")
     elif choice == "2":
         encrypt_directory("AES-EF", key)
-        print("Dossier par défaut (AES-EF) crypté avec succès.")
+        print("Default directory (AES-EF) encrypted successfully.")
     else:
-        print("Choix invalide.")
-#Create P_F_H
+        print("Invalid choice.")
+#Create past file
 
+with open("AES-EF\PAST_FILE_HERE", "w") as f:
+    f.write("You are in past here and you understand what I mean!")
 
 if __name__ == "__main__":
     main()
-with open("AES-EF\PAST_FILE_HERE", "w") as f:
-    f.write("J'/te demande de coller le fichier ici, t'es con ou quoi *_*")
