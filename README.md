@@ -1,6 +1,4 @@
 # AES-E-D
-
-AES-E-D
 # AES Encryption and Decryption
 
 This Python script allows you to encrypt and decrypt files using the AES encryption algorithm. The code utilizes the pycryptodome library to implement AES encryption.
