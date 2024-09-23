@@ -1,4 +1,5 @@
 # AES Encryption and Decryption
+![Python](https://img.shields.io/badge/made_with-python-yellow)
 
 This Python script allows you to encrypt and decrypt files using the AES encryption algorithm. The code utilizes the pycryptodome library to implement AES encryption.
 
